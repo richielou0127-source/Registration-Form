@@ -1,1 +1,137 @@
-This is for school purposes only, and this is the source code for Registration Form. Thankyou Student From 1-D PADILLO, RICHIELOU C.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f4fd; /* Light blue background for a school feel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid #007bff; /* Blue border for school theme */
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #007bff; /* Blue heading */
+            font-size: 24px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+            background-color: white;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <p>Please fill out the form to enroll.</p>
+        <form action="/submit" method="post"> <!-- Replace with your backend endpoint -->
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="grade">Grade Level:</label>
+            <select id="grade" name="grade" required>
+                <option value="">Select Grade</option>
+                <option value="kindergarten">Kindergarten</option>
+                <option value="1">1st Grade</option>
+                <option value="2">2nd Grade</option>
+                <option value="3">3rd Grade</option>
+                <option value="4">4th Grade</option>
+                <option value="5">5th Grade</option>
+                <option value="6">6th Grade</option>
+                <option value="7">7th Grade</option>
+                <option value="8">8th Grade</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
+                <option value="12">12th Grade</option>
+            </select>
+
+            <label for="email">Student Email (if applicable):</label>
+            <input type="email" id="email" name="email">
+
+            <label for="parent-name">Parent/Guardian Name:</label>
+            <input type="text" id="parent-name" name="parent-name" required>
+
+            <label for="parent-email">Parent/Guardian Email:</label>
+            <input type="email" id="parent-email" name="parent-email" required>
+
+            <label for="address">Home Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </div>
+</body>
+</html>
